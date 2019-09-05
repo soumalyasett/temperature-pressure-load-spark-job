@@ -25,7 +25,7 @@ class TemperatureLoadExecutor(var spark: SparkSession) {
 4.overwrite query for the final table(fields are separated by \n)
 --------------------*/
 
-  val cfg = ConfigFactory.parseFile(new File("C:/cfg_files/temperaturePressure.properties"))
+  val cfg = ConfigFactory.parseFile(new File("C:/cfg_files/temperaturePressure.properties")) //pass this path as argument
   var metric1 = ArrayBuffer[String]()
   metric1.appendAll(cfg.getString("metric1").split("\n"))
   var metric2 = ArrayBuffer[String]()
