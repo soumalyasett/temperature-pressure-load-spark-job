@@ -44,7 +44,7 @@ class DataCleansingActivity(var spark: SparkSession) {
   def Dataset_load(i: String): scala.io.BufferedSource = {
     val temperatureDataset = scala.io.Source.fromURL(i)
       temperatureDataset
-    }
+    } // This function is used for downloading the url for all the datasets
   
   def finalTemperatureDatasetRdd1 : org.apache.spark.rdd.RDD[org.apache.spark.sql.Row] = {
     
